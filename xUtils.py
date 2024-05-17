@@ -32,7 +32,7 @@ def toMp3(mp4FileName):
         audio = video.audio
         mp3Name = str(uuid.uuid4()) + ".mp3"
         # 写入MP3文件并设置比特率
-        audio.write_audiofile(mp3Name, codec='libmp3lame', bitrate='64K')
+        audio.write_audiofile("./data/"+mp3Name, codec='libmp3lame', bitrate='64K')
 
         # 关闭视频和音频的读取器，释放资源
         video.reader.close()
@@ -56,3 +56,6 @@ def mp4Time(mp4FileName):
     durationStr = str(minutes) + "分" + str(remaining_seconds) + "秒"
     print("视频时长：" + durationStr)
     return durationStr
+
+
+#toMp3("./data/126e5de0-c1bd-4638-8286-71bdb1c08162.mp4")
