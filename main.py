@@ -25,7 +25,7 @@ with open('wtb.html', 'r', encoding='utf-8') as file:
             # 获取图片的src地址
             ariaLabel = a['aria-label']
             href = a['href']
-            if "5年前" in ariaLabel:
+            if "2年前" in ariaLabel:
                 mp3_data = Mp3Data()
                 title = re.sub(r"\s+", "", a.text)
                 # 下载
@@ -40,7 +40,7 @@ with open('wtb.html', 'r', encoding='utf-8') as file:
                 # 数据集成json
                 print("数据集成json")
                 mp3_data.title = title
-                mp3_data.url = "https://xiongod.github.io/ndwtb2019/" + mp3Name
+                mp3_data.url = "https://xiongod.github.io/ndwtb2022/" + mp3Name
                 mp3_data.duration = durationStr
                 data_list.append(mp3_data)
                 index += 1
